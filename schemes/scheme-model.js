@@ -30,7 +30,6 @@ function update(updates, id) {
 }
 
 function remove(id) {
-
     return findById(id)
         .then(scheme => {
            return db('schemes').where({ id }).delete()

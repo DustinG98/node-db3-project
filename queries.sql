@@ -8,10 +8,10 @@ join Category as c
 
 
 -- Display the order Id and shipper CompanyName for all orders placed before August 9 2012. Shows 429 records.
-select o.Id, c.CompanyName
+select o.Id, s.CompanyName
 from [Order] as o 
-join Customer as c
-    on o.CustomerId = c.Id
+join Shipper as s
+    on o.ShipVia = s.Id
 where o.OrderDate < '2012-08-09'
 
 
