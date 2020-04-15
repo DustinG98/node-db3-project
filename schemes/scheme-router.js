@@ -103,6 +103,7 @@ router.delete('/:id', (req, res) => {
 
   Schemes.remove(id)
   .then(deleted => {
+    console.log(deleted)
     if (deleted) {
       res.json({ removed: deleted });
     } else {
